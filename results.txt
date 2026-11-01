@@ -1,0 +1,116 @@
+
+===== sql\01_nth_highest_salary.sql =====
+['salary_rank', 'salary', 'employees_at_salary']
+(1, 129492, 1)
+(2, 127238, 1)
+(3, 127041, 1)
+(4, 126703, 1)
+(5, 125469, 1)
+
+===== sql\02_top3_per_department.sql =====
+['dept_name', 'rnk', 'emp_no', 'first_name', 'last_name', 'salary']
+('Customer Service', 1, 267005, 'Filipe', 'Condotta', 122423)
+('Customer Service', 2, 98169, 'Bedrich', 'Luft', 120032)
+('Customer Service', 3, 93938, 'Boutros', 'Veeraraghavan', 117948)
+('Development', 1, 236461, 'Bezalel', 'Kamble', 110449)
+('Development', 2, 290789, 'Jinxi', 'Swift', 106109)
+('Development', 3, 246465, 'Apostol', 'Leuchs', 105086)
+('Finance', 1, 12643, 'Morrie', 'Schurmann', 114784)
+('Finance', 2, 274268, 'Goo', 'Keirsey', 113236)
+('Finance', 3, 405597, 'Lokesh', 'Tibblin', 112781)
+('Human Resources', 1, 421835, 'Yinlin', 'Flowers', 110308)
+('Human Resources', 2, 83349, 'Bernt', 'Benzmuller', 101593)
+('Human Resources', 3, 212652, 'Pragnesh', 'McConalogue', 99849)
+('Marketing', 1, 439725, 'Kristen', 'Begiun', 118250)
+('Marketing', 2, 51531, 'Clyde', 'Georgakopoulos', 116412)
+('Marketing', 3, 102658, 'Xumin', 'Businaro', 115993)
+
+===== sql\03_earn_more_than_manager.sql =====
+['dept_name', 'top_manager_salary', 'employees_earning_more']
+('Development', 48626, 34192)
+('Production', 50365, 26294)
+('Sales', 71612, 23596)
+('Finance', 60026, 8187)
+('Customer Service', 53846, 5494)
+('Marketing', 71166, 4971)
+('Human Resources', 48291, 3988)
+('Quality Management', 61357, 1707)
+('Research', 72446, 739)
+
+===== sql\04_running_headcount.sql =====
+['hire_month', 'hired', 'running_headcount']
+(datetime.datetime(1985, 1, 1, 0, 0), 10, 10)
+(datetime.datetime(1985, 2, 1, 0, 0), 2949, 2959)
+(datetime.datetime(1985, 3, 1, 0, 0), 3431, 6390)
+(datetime.datetime(1985, 4, 1, 0, 0), 3196, 9586)
+(datetime.datetime(1985, 5, 1, 0, 0), 3370, 12956)
+(datetime.datetime(1985, 6, 1, 0, 0), 3171, 16127)
+(datetime.datetime(1985, 7, 1, 0, 0), 3291, 19418)
+(datetime.datetime(1985, 8, 1, 0, 0), 3255, 22673)
+(datetime.datetime(1985, 9, 1, 0, 0), 3244, 25917)
+(datetime.datetime(1985, 10, 1, 0, 0), 3193, 29110)
+(datetime.datetime(1985, 11, 1, 0, 0), 3114, 32224)
+(datetime.datetime(1985, 12, 1, 0, 0), 3092, 35316)
+(datetime.datetime(1986, 1, 1, 0, 0), 3121, 38437)
+(datetime.datetime(1986, 2, 1, 0, 0), 2820, 41257)
+(datetime.datetime(1986, 3, 1, 0, 0), 3138, 44395)
+
+===== sql\05_gaps_and_islands.sql =====
+['streak_start', 'streak_end', 'consecutive_hiring_days']
+(datetime.date(1985, 2, 1), datetime.date(1999, 7, 1), 5264)
+(datetime.date(1999, 7, 12), datetime.date(1999, 9, 3), 54)
+(datetime.date(1999, 9, 5), datetime.date(1999, 10, 6), 32)
+(datetime.date(1999, 10, 8), datetime.date(1999, 10, 19), 12)
+(datetime.date(1999, 11, 12), datetime.date(1999, 11, 23), 12)
+(datetime.date(1999, 7, 3), datetime.date(1999, 7, 10), 8)
+(datetime.date(1999, 11, 29), datetime.date(1999, 12, 4), 6)
+(datetime.date(1999, 12, 30), datetime.date(2000, 1, 4), 6)
+(datetime.date(1999, 10, 26), datetime.date(1999, 10, 30), 5)
+(datetime.date(1999, 11, 6), datetime.date(1999, 11, 8), 3)
+
+===== sql\06_recursive_month_calendar.sql =====
+['month_start', 'hires']
+(datetime.date(1985, 1, 1), 10)
+(datetime.date(1985, 2, 1), 2949)
+(datetime.date(1985, 3, 1), 3431)
+(datetime.date(1985, 4, 1), 3196)
+(datetime.date(1985, 5, 1), 3370)
+(datetime.date(1985, 6, 1), 3171)
+(datetime.date(1985, 7, 1), 3291)
+(datetime.date(1985, 8, 1), 3255)
+(datetime.date(1985, 9, 1), 3244)
+(datetime.date(1985, 10, 1), 3193)
+(datetime.date(1985, 11, 1), 3114)
+(datetime.date(1985, 12, 1), 3092)
+(datetime.date(1986, 1, 1), 3121)
+(datetime.date(1986, 2, 1), 2820)
+(datetime.date(1986, 3, 1), 3138)
+
+===== sql\07_recursive_title_ladder.sql =====
+['step', 'title', 'employees', 'avg_salary']
+(1, 'Assistant Engineer', 5835, 48564.0)
+(2, 'Engineer', 47303, 48535.0)
+(3, 'Senior Engineer', 97747, 48507.0)
+(4, 'Technique Leader', 15148, 48583.0)
+
+===== sql\08_duplicate_detection_and_removal.sql =====
+['original_rows', 'rows_after_cleanup', 'duplicates_remaining']
+(300024, 300024, 0)
+
+===== sql\09_pivot_headcount_by_department.sql =====
+['hire_year', 'marketing', 'finance', 'human_resources', 'production', 'development', 'quality_management', 'sales', 'research', 'customer_service']
+(1985, 2400, 2044, 2052, 8788, 10174, 2381, 6019, 2522, 2700)
+(1986, 2361, 2128, 2169, 8887, 10237, 2367, 6359, 2548, 2949)
+(1987, 2238, 1934, 1982, 8161, 9559, 2288, 5855, 2328, 2585)
+(1988, 2156, 1790, 1835, 7786, 8885, 2107, 5410, 2228, 2508)
+(1989, 1883, 1684, 1676, 6796, 8152, 1914, 5030, 1976, 2237)
+(1990, 1692, 1434, 1497, 6383, 7322, 1695, 4497, 1792, 2016)
+(1991, 1581, 1324, 1415, 5490, 6390, 1461, 3874, 1587, 1812)
+(1992, 1376, 1192, 1182, 4973, 5946, 1341, 3561, 1434, 1534)
+(1993, 1232, 1001, 1027, 4278, 5059, 1201, 3188, 1240, 1441)
+(1994, 1047, 875, 925, 3590, 4233, 1008, 2564, 1051, 1170)
+(1995, 769, 699, 720, 2998, 3501, 817, 2131, 852, 926)
+(1996, 600, 534, 583, 2364, 2743, 712, 1635, 679, 718)
+(1997, 461, 376, 383, 1628, 1918, 446, 1149, 489, 525)
+(1998, 302, 241, 251, 1003, 1150, 272, 710, 295, 338)
+(1999, 111, 89, 85, 358, 435, 106, 262, 105, 120)

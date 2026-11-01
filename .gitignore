@@ -1,0 +1,5 @@
+*.duckdb
+__pycache__/
+data/
+schema_check.txt
+explore_output.txt
